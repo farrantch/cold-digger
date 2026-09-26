@@ -1,15 +1,18 @@
-# Cold Digger
+<div align="center">
+  <img src="assets/cold-digger.png" alt="Cold Digger logo" width="360">
+  <h1>Cold Digger</h1>
+  <p><strong>A pickaxe for cold storage.</strong></p>
+  <p>Offline disk-image forensics for crypto wallets, deleted files, browser history, and media.</p>
 
-<img src="assets/cold-digger.png" alt="Cold Digger: a miner striking a hard drive" width="260">
+  [![CI](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml/badge.svg)](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml)
+  [![Latest release](https://img.shields.io/github/v/release/farrantch/cold-digger)](https://github.com/farrantch/cold-digger/releases/latest)
+  [![License: MIT](https://img.shields.io/badge/license-MIT-d6a53b.svg)](LICENSE)
+  ![Platform: Linux](https://img.shields.io/badge/platform-Linux-4b82b8.svg)
+</div>
 
-[![Tests](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml/badge.svg)](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml)
-[![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
-
-**A pickaxe for cold storage.**
-
-Cold Digger digs through raw disk images for wallet material, deleted files,
-browser history, and media. It runs locally and treats the source image as
-read-only.
+Cold Digger scans raw disk images locally and leaves the source untouched. It
+finds wallet material, recovers deleted files, and builds a searchable offline
+report.
 
 ## What you get
 
