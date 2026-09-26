@@ -1,7 +1,6 @@
 <div align="center">
   <img src="assets/cold-digger.png" alt="Cold Digger logo" width="360">
   <h1>Cold Digger</h1>
-  <p><strong>A pickaxe for cold storage.</strong></p>
   <p>Offline disk-image forensics for crypto wallets, deleted files, browser history, and media.</p>
 
   [![CI](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml/badge.svg)](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml)
