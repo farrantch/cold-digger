@@ -1,5 +1,7 @@
 # Cold Digger
 
+<img src="assets/cold-digger.png" alt="Cold Digger: a miner striking a hard drive" width="260">
+
 [![Tests](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml/badge.svg)](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml)
 [![MIT License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
 
