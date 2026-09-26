@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/cold-digger.png" alt="Cold Digger logo" width="360">
   <h1>Cold Digger</h1>
-  <p>Offline disk-image forensics for crypto wallets, deleted files, browser history, and media.</p>
+  <p>Disk-image forensics for crypto wallets, deleted files, browser history, and media.</p>
 
   [![CI](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml/badge.svg)](https://github.com/farrantch/cold-digger/actions/workflows/tests.yaml)
   [![Latest release](https://img.shields.io/github/v/release/farrantch/cold-digger)](https://github.com/farrantch/cold-digger/releases/latest)
