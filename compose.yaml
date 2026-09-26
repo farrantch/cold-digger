@@ -1,0 +1,41 @@
+services:
+  analyzer:
+    build: .
+    image: cold-digger:local
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=256m
+    volumes:
+      - type: bind
+        source: ${IMAGE_DIR:?Set IMAGE_DIR to the directory containing your disk images}
+        target: /images
+        read_only: true
+      - type: bind
+        source: ${CASE_DIR:?Set CASE_DIR to an existing writable results directory}
+        target: /cases
+
+  # Run explicitly: docker compose run --rm browser serve /cases/CASE --image /images/DISK.img
+  # Ubuntu host networking lets the server bind only to the host's loopback.
+  browser:
+    profiles: [browser]
+    build: .
+    image: cold-digger:local
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    network_mode: host
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=256m
+    volumes:
+      - type: bind
+        source: ${IMAGE_DIR:?Set IMAGE_DIR to the directory containing your disk images}
+        target: /images
+        read_only: true
+      - type: bind
+        source: ${CASE_DIR:?Set CASE_DIR to an existing writable results directory}
+        target: /cases

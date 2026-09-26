@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible problem using synthetic or safely redacted data
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not attach real case data, disk images, private keys, seed phrases, or browser history.
+  - type: input
+    id: version
+    attributes:
+      label: Cold Digger version
+      placeholder: 0.1.0 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: Installation method
+      options:
+        - Native Ubuntu installation
+        - Docker
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Include the command, expected result, and actual result using synthetic paths and data.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and tool versions
+      description: Include Ubuntu, Python, and relevant output from `cold-digger doctor`.
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Sensitive-data check
+      options:
+        - label: I removed all real secrets, personal data, disk images, and case artifacts.
+          required: true

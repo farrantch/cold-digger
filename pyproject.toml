@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cold-digger"
+version = "0.1.0"
+description = "Offline, read-only disk-image recovery and crypto triage"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "farrantch"}]
+requires-python = ">=3.11,<3.14"
+dependencies = ["bip-utils==2.12.2"]
+keywords = ["digital-forensics", "disk-image", "data-recovery", "cryptocurrency", "bitcoin"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Security",
+  "Topic :: System :: Archiving :: Backup",
+]
+
+[project.scripts]
+cold-digger = "disk_analyzer.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/farrantch/cold-digger"
+Repository = "https://github.com/farrantch/cold-digger"
+Issues = "https://github.com/farrantch/cold-digger/issues"
+Changelog = "https://github.com/farrantch/cold-digger/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["disk_analyzer*"]
+
+[tool.setuptools.package-data]
+disk_analyzer = ["data/*.txt", "static/*.js", "static/*.css"]
