@@ -5,6 +5,10 @@ All notable changes to Cold Digger will be documented here. The project follows
 
 ## [Unreleased]
 
+### Changed
+
+- Replaced the exhaustive landing-page README with a short quick-start guide.
+
 ## [0.1.0] - 2026-09-26
 
 ### Added
