@@ -10,7 +10,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 authors = [{name = "farrantch"}]
 requires-python = ">=3.11,<3.14"
-dependencies = ["bip-utils==2.12.2"]
+dependencies = ["bip-utils==2.12.3"]
 keywords = ["digital-forensics", "disk-image", "data-recovery", "cryptocurrency", "bitcoin"]
 classifiers = [
   "Development Status :: 3 - Alpha",
